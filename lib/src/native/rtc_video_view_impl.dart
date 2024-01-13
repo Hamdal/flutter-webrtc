@@ -31,6 +31,25 @@ class RTCVideoView extends StatelessWidget {
             _buildVideoView(context, constraints));
   }
 
+  BoxFit getFitForObjectFit(RTCVideoViewObjectFit objectFit) {
+    switch (objectFit) {
+      case RTCVideoViewObjectFit.RTCVideoViewObjectFitContain:
+        return BoxFit.contain;
+      case RTCVideoViewObjectFit.RTCVideoViewObjectFitCover:
+        return BoxFit.cover;
+      case RTCVideoViewObjectFit.RTCVideoViewObjectFitFitFill:
+        return BoxFit.fill;
+      case RTCVideoViewObjectFit.RTCVideoViewObjectFitFitHeight:
+        return BoxFit.fitHeight;
+      case RTCVideoViewObjectFit.RTCVideoViewObjectFitFitScaleDown:
+        return BoxFit.scaleDown;
+      case RTCVideoViewObjectFit.RTCVideoViewObjectFitFitWidth:
+        return BoxFit.fitWidth;
+      default:
+        return BoxFit.contain;
+    }
+  }
+
   Widget _buildVideoView(BuildContext context, BoxConstraints constraints) {
     return Center(
       child: Container(
@@ -38,9 +57,7 @@ class RTCVideoView extends StatelessWidget {
         height: constraints.maxHeight,
         child: FittedBox(
           clipBehavior: Clip.hardEdge,
-          fit: objectFit == RTCVideoViewObjectFit.RTCVideoViewObjectFitContain
-              ? BoxFit.contain
-              : BoxFit.cover,
+          fit: getFitForObjectFit(objectFit),
           child: Center(
             child: ValueListenableBuilder<RTCVideoValue>(
               valueListenable: videoRenderer,

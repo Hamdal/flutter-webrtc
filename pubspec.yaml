@@ -2,6 +2,7 @@ name: flutter_webrtc
 description: Flutter WebRTC plugin for iOS/Android/Destkop/Web, based on GoogleWebRTC.
 version: 0.9.47
 homepage: https://github.com/cloudwebrtc/flutter-webrtc
+publish_to: none
 environment:
   sdk: '>=2.12.0 <4.0.0'
   flutter: '>=1.22.0'
@@ -12,7 +13,10 @@ dependencies:
   flutter:
     sdk: flutter
   path_provider: ^2.0.2
-  webrtc_interface: 1.1.2
+  webrtc_interface:
+    git:
+      url: git@github.com:Hamdal/webrtc-interface.git
+      ref: feat/additional-videoviewobject-fit
 
 dev_dependencies:
   flutter_test:
@@ -21,6 +25,12 @@ dev_dependencies:
   lints: ^2.0.0
   pedantic: ^1.11.1
   test: any
+
+dependency_overrides:
+  webrtc_interface:
+    git:
+      url: git@github.com:Hamdal/webrtc-interface.git
+      ref: feat/additional-videoviewobject-fit
 
 flutter:
   plugin:
