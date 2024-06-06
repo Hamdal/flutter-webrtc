@@ -1,6 +1,58 @@
 # Changelog
 
 --------------------------------------------
+[0.10.8] - 2024-06-05
+
+* [iOS] fix(platform_view): fit cover works wrong (#1593)
+* [iOS/macOS] fix: Fix the issue that the video is not displayed when using 'video': true (#1592)
+* [Web] bump dart_webrtc to 1.4.6.
+
+[0.10.7] - 2024-05-30
+
+* [iOS] feat: add PlatformView Renderer for iOS. (#1569)
+* [iOS] fix: audio session control for iOS. (#1590)
+
+[0.10.6] - 2024-05-13
+
+* [Web] Some important fixes for web.
+
+[0.10.5] - 2024-05-13
+
+* [Android] fix: make MediaDeviceInfo (Audio deviceId, label, groupId) consistent. (#1583)
+
+[0.10.4] - 2024-05-06
+
+* [iOS/macOS] chore: update swift webrtc sdks to 114.5735.10 (#1576)
+* [Android] fix: actually call selectAudioOutput in enableSpeakerButPreferBluetooth
+* [iOS] fix: remember speakerphone mode for ensureAudioSession (#1568)
+* [Windows/Linux] Fix handling of unimplemented method (#1563)
+
+[0.10.3] - 2024-04-09
+
+* [iOS/macOS] Fix compilation warning for iOS/macOS.
+
+[0.10.2] - 2024-04-08
+
+* [Native/Web] feat: add keyRingSize/discardFrameWhenCryptorNotReady to KeyProviderOptions.
+
+[0.10.1] - 2024-04-08
+
+* [Web] fix renderer issue for web.
+
+[0.10.0] - 2024-04-08
+
+* [Web] move to package:web.
+
+[0.9.48+hotfix.1] - 2024-02-05
+
+* [Android] bump version for libwebrtc.
+
+[0.9.48] - 2024-02-05
+
+* [Android] bump version for libwebrtc.
+* [iOS] Supports ensureAudioSsession method for iOS only. (#1514)
+* [Android] fix android wrong display size. (#1508).
+
 [0.9.47] - 2023-11-29
 
 * [Windows/Linux] fix: Check the invalid value of candidate and session description. (#1484)
