@@ -1,6 +1,23 @@
 # Changelog
 
 --------------------------------------------
+[0.11.3] - 2024-07-12
+
+* Bump version for libwebrtc.
+
+[0.11.2] - 2024-07-09
+
+* [Windows] fix crash for windows.
+* [Darwin] bump WebRTC version for darwin.
+
+[0.11.1] - 2024-06-17
+
+* [macOS] Downgrade macOS system dependencies to 10.14.
+
+[0.11.0] - 2024-06-17
+
+* [Native] upgrade libwebrtc to m125.6422.
+
 [0.10.8] - 2024-06-05
 
 * [iOS] fix(platform_view): fit cover works wrong (#1593)
