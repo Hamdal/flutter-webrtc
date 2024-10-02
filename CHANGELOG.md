@@ -1,6 +1,30 @@
 # Changelog
 
 --------------------------------------------
+[0.11.7] - 2024-09-04
+
+* [Web] Bump dart_webrtc to 1.4.9.
+* [Web] Bump web version to 1.0.0.
+
+[0.11.6+hotfix.1] - 2024-08-07
+
+* [iOS] Fixed PlatformView not rendering after resuming from background.
+
+[0.11.6] - 2024-08-02
+
+* [Web] change VideoElement to HTMLVideoElement.
+* [iOS] added shared singleton for FlutterWebRTCPlugin (#1634)
+* [iOS] Using av samplebuffer for PlatformView (#1635)
+
+
+[0.11.5] - 2024-07-23
+
+* [Android] Report actual sizes for camera media stream track (#1636).
+
+[0.11.4] - 2024-07-19
+
+* [Android] fix issue for camera switching.
+
 [0.11.3] - 2024-07-12
 
 * Bump version for libwebrtc.

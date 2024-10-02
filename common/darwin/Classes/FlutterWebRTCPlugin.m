@@ -100,6 +100,16 @@ void postEvent(FlutterEventSink _Nonnull sink, id _Nullable event) {
 #endif
 }
 
+static FlutterWebRTCPlugin *sharedSingleton;
+
++ (FlutterWebRTCPlugin *)sharedSingleton
+{
+  @synchronized(self)
+  {
+    return sharedSingleton;
+  }
+}
+
 @synthesize messenger = _messenger;
 @synthesize eventSink = _eventSink;
 @synthesize preferredInput = _preferredInput;
@@ -131,6 +141,7 @@ void postEvent(FlutterEventSink _Nonnull sink, id _Nullable event) {
                    withTextures:(NSObject<FlutterTextureRegistry>*)textures {
 
   self = [super init];
+  sharedSingleton = self;
 
   FlutterEventChannel* eventChannel =
       [FlutterEventChannel eventChannelWithName:@"FlutterWebRTC.Event" binaryMessenger:messenger];
@@ -789,13 +800,6 @@ void postEvent(FlutterEventSink _Nonnull sink, id _Nullable event) {
         }
       }
       render.videoTrack = videoTrack;
-      result(nil);
-  } else if([@"videoPlatformViewRendererSetObjectFit" isEqualToString:call.method]){
-      NSDictionary* argsMap = call.arguments;
-      NSNumber* viewId = argsMap[@"viewId"];
-      NSNumber* fit = argsMap[@"objectFit"];
-      FlutterRTCVideoPlatformViewController* render = _platformViewFactory.renders[viewId];
-      [render setObjectFit:fit];
       result(nil);
   } else if ([@"videoPlatformViewRendererDispose" isEqualToString:call.method]) {
       NSDictionary* argsMap = call.arguments;
