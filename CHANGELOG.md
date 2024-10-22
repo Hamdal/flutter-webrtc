@@ -1,6 +1,22 @@
 # Changelog
 
 --------------------------------------------
+[0.12.1] - 2024-10-21
+
+* [web] fix: add stub WebRTC.initialize for web.
+* [Docs] Fixing proguard rules link (#1686)
+* [iOS/Android] feat: support unprocessed audio (#825)
+* [eLinux] feat: add support for eLinux (#1338)
+
+[0.12.0+hotfix.1] - 2024-10-18
+
+* [macOS] fix compilation error for macOS.
+
+[0.12.0] - 2024-10-16
+
+* [iOS/macOS] Fix memory leak for iOS/macOS.
+* [iOS] Support MultiCam Session for iOS.
+
 [0.11.7] - 2024-09-04
 
 * [Web] Bump dart_webrtc to 1.4.9.
