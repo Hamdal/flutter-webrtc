@@ -29,7 +29,7 @@ dependency_overrides:
   webrtc_interface:
     git:
       url: git@github.com:Hamdal/webrtc-interface.git
-      ref: d34e505
+      ref: "8755467"
 
 flutter:
   plugin:
